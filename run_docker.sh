@@ -1,6 +1,7 @@
 if docker ps -a | grep -q freqtrade_develop; then
     echo "Container freqtrade_develop exists, starting it..."
     docker start freqtrade_develop
+    docker exec -it freqtrade_develop /bin/bash
 else
     echo "Container freqtrade_develop does not exist, creating and starting a new one..."
     docker run -it \
