@@ -7,6 +7,7 @@ else
     docker run -it \
         --name "freqtrade_develop" \
         --publish 8080:8080 \
+        --publish 8888:8888 \
         --mount type=bind,source="$(pwd)",target=/freqtrade,consistency=cached \
         --user "ftuser" \
         ghcr.io/freqtrade/freqtrade-devcontainer:latest \
